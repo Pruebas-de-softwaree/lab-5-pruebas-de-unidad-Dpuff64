@@ -54,37 +54,4 @@ def run():
             print("Invalid option")
 
 if __name__ == "__main__":
-    lib = Library()
-
-    try:
-        lib.add_book(Book("1984", "George Orwell", 1949, "ISBN001"))
-        print("Libro agregado con éxito")
-    except Exception as e:
-        print(f"Error al agregar libro: {e}")
-
-    try:
-        usuario = User("Anna", "U001")
-        lib.add_user(usuario)
-        print("Usuario añadido con éxito")
-    except Exception as e:
-        print(f"Error al agregar usuario: {e}")
-
-    try:
-        libro = lib._find_book("ISBN001")
-        print(f"Libro encontrado {libro.title}")
-    except Exception as e:
-        print(f"Error al buscar libro: {e}")
-
-    try:
-        lib.borrow_book("U001", "ISBN001")
-        print("Libro prestado con éxito")
-    except Exception as e:
-        print(f"Error al prestar libro: {e}")
-
-    try:
-        lib.borrow_book("U001", "ISBN001")
-        print("Este mensaje no debería aparecer")
-    except Exception as e:
-        print(f"Este libro ya fue prestado: {e}")
-
-    print("Historial del usuario:", usuario.get_history())
+    run()
